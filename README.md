@@ -1,12 +1,10 @@
-# Expo Router Example
+# rtk query
+This repository serves as code for my technical blog about using redux toolkit query for data fetching. 
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+## 📝 Branches
+main - contain finally code with RTK query and UI  <br/>
+UI - contains the starter code and a basic UI. A good place to start 
 
-## 🚀 How to use
-
-```sh
-npx create-expo-app -e with-router
-```
 
 ## 📝 Notes
 
