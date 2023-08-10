@@ -3,7 +3,7 @@ This repository serves as code for my technical blog about using redux toolkit q
 
 ## 📝 Branches
 main - contain finally code with RTK query and UI  <br/>
-UI - contains the starter code and a basic UI. A good place to start 
+ui - contains the starter code and a basic UI. A good place to start 
 
 
 ## 📝 Notes
