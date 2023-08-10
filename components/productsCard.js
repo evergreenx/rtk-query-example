@@ -2,7 +2,9 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
 
-export default function ProductsCard() {
+export default function ProductsCard({ item}) {
+
+  
   return (
     <Link 
     href="/details"
@@ -15,10 +17,12 @@ export default function ProductsCard() {
           }}
         />
         <Text className="text-secondary font-semibold text-base text-left mt-[16px] mb-[8px]">
-          Title
+          {
+            item.title.length > 15 ? item.title.substring(0, 15) + "..." : item.title
+          }
         </Text>
 
-        <Text className="text-primary text-base font-medium">$Price</Text>
+        <Text className="text-primary text-base font-medium">${item.price}</Text>
       </View>
     </Link>
   );

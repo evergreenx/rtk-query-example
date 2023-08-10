@@ -1,47 +1,86 @@
 import {
   SafeAreaView,
-  StyleSheet,
   Text,
   View,
-  TextInput,
-  TouchableOpacity,
-  Image,
 } from "react-native";
 import SearchComponent from "../components/inputs";
 
 import { FlashList } from "@shopify/flash-list";
 import React from "react";
 import ProductsCard from "../components/productsCard";
-import Svg, { Circle, Rect, Path } from "react-native-svg";
+import Svg, { Path } from "react-native-svg";
+
 
 export default function Page() {
   const [searchText, setSearchText] = React.useState("");
 
-  const _renderItem = ({ item }) => {
-    return <ProductsCard />;
+  const _renderItem = (item) => {
+    return <ProductsCard item={item} />;
   };
 
   const DATA = [
     {
-      title: "First Item",
+      title: "Classic Leather Watch",
+      price: 89.99,
+      description:
+        "Elevate your style with this classic leather watch. Featuring a genuine leather strap and a timeless design, this watch is perfect for any occasion.",
     },
     {
-      title: "Second Item",
-    },
-
-    {
-      title: "First Item",
-    },
-    {
-      title: "Second Item",
+      title: "Wireless Bluetooth Earbuds",
+      price: 49.99,
+      description:
+        "Experience music like never before with our high-quality wireless Bluetooth earbuds. Enjoy crisp sound, comfortable fit, and long battery life.",
     },
     {
-      title: "First Item",
+      title: "Floral Print Maxi Dress",
+      price: 59.99,
+      description:
+        "Embrace the beauty of nature with our elegant floral print maxi dress. Made from lightweight fabric, this dress is both comfortable and stylish for your summer outings.",
     },
     {
-      title: "Second Item",
+      title: "Smart Home Security Camera",
+      price: 129.99,
+      description:
+        "Keep your home safe and secure with our advanced smart home security camera. Monitor your property from anywhere with real-time HD video and motion detection.",
+    },
+    {
+      title: "Gourmet Coffee Sampler Pack",
+      price: 19.99,
+      description:
+        "Indulge in a variety of rich and flavorful coffees with our gourmet coffee sampler pack. Discover new blends and awaken your taste buds.",
+    },
+    {
+      title: "Laptop Backpack with USB Charging Port",
+      price: 39.99,
+      description:
+        "Stay organized and connected on the go with our laptop backpack featuring a built-in USB charging port. Ample storage and ergonomic design make it a perfect travel companion.",
+    },
+    {
+      title: "Fitness Resistance Bands Set",
+      price: 29.99,
+      description:
+        "Achieve your fitness goals with our versatile resistance bands set. Perfect for home workouts, these bands offer varying levels of resistance for a full-body workout.",
+    },
+    {
+      title: "Organic Skincare Gift Set",
+      price: 79.99,
+      description:
+        "Treat your skin to luxury with our organic skincare gift set. Packed with nourishing ingredients, this set includes cleanser, moisturizer, and serum for a radiant complexion.",
+    },
+    {
+      title: "Portable Solar Charger",
+      price: 49.99,
+      description:
+        "Harness the power of the sun with our portable solar charger. Keep your devices charged during outdoor adventures and emergencies.",
+    },
+    {
+      title: "Handcrafted Leather Wallet",
+      price: 39.99,
+      description:
+        "Experience the craftsmanship of our handcrafted leather wallet. With multiple card slots and a sleek design, it's both functional and stylish.",
     },
   ];
+
 
   const renderHeader = () => {
     return (
@@ -77,6 +116,7 @@ export default function Page() {
 
           <SearchComponent />
         </View>
+
         <FlashList
           data={DATA}
           showsHorizontalScrollIndicator={false}
