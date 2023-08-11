@@ -5,8 +5,8 @@ import { Link } from "expo-router";
 
 export default function details() {
   return (
-    <SafeAreaView className="flex-1 py-[60px]">
-      <View className="flex-1">
+    <SafeAreaView className="flex-1 py-[60px] px-[20px]">
+      <View className="flex-1 py-[20px] ">
         <Link href="/" className=" p-2">
           <Svg
             width="24"

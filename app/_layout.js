@@ -1,7 +1,11 @@
 import { Slot } from "expo-router";
-
-// import "../global.css";
+import store from "../store";
+import { Provider } from "react-redux";
 
 export default function () {
-  return <Slot />;
+  return (
+    <Provider store={store}>
+      <Slot />
+    </Provider>
+  );
 }
